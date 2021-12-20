@@ -1,1 +1,3 @@
-# VELVET
+# VELVET: a noVel Ensemble Learning approach to automatically locate VulnErable sTatements (SANER 2022)
+
+Data and code for our SANER 2022 paper. More details are coming soon....

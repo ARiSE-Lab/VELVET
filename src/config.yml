@@ -1,0 +1,51 @@
+model:
+  configuration: "ggnn"
+  base:
+    hidden_dim: 256
+    dropout_rate: 0.1
+    num_edge_types: 24
+  evaluation:
+    top: 1
+    node_of_line: 7
+    window_size: 9
+  ggnn:
+    time_steps: [3, 1, 3, 1]
+    residuals:  # Note: keys must be strings for TF checkpointing
+      "1": [0]
+      "3": [0, 1]
+    add_type_bias: true
+  transformer:
+    ff_dim: 2048
+    num_layers: 6
+    attention_dim: 512
+    num_heads: 8
+model_2:
+  configuration: "transformer"
+  base:
+    hidden_dim: 256
+    dropout_rate: 0.1
+    num_edge_types: 24
+  ggnn:
+    time_steps: [3, 1, 3, 1]
+    residuals:  # Note: keys must be strings for TF checkpointing
+      "1": [0]
+      "3": [0, 1]
+    add_type_bias: true
+  transformer:
+    ff_dim: 2048
+    num_layers: 6
+    attention_dim: 512
+    num_heads: 8
+data:
+  max_batch_size: 1250
+  max_buffer_size: 100  # In terms of no. of (maximum efficiency) batches.
+  max_node_size: 1024
+  valid_interval: 5000 # 25000 for LOC pre-training, 50000 for CLS fine-tuning*, 2500 for LOC fine-tuning, 5000 for CLS fine-tuning
+  max_valid_samples: 25000
+  max_token_length: 10  # In terms of (BPE) sub-tokens.
+  w2v_dimension: 256
+training:
+  max_steps: 50 # 10 for pre-training, 50 for fine-tuning
+  print_freq: 500
+  learning_rate: 0.00001 # 0.0001 is for pre-training, 0.00001 is for fine-tuning
+

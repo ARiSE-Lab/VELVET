@@ -1,6 +1,6 @@
 <p align="center">
-  <img src="images/columbia-logo.png" width="150" />
-  <img src="images/ibm-logo.jpg" width="150" />
+  <img src="images/columbia-logo.png" width="120" />
+  <img src="images/ibm-logo.jpg" width="120" />
 </p>
 
 # VELVET: a noVel Ensemble Learning approach to automatically locate VulnErable sTatements ([SANER 2022](https://saner2022.uom.gr/restrack))

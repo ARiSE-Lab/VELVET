@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="images/columbia-logo.png" width="150" />
+  <img src="images/ibm-logo.jpg" width="150" />
+</p>
+
 # VELVET: a noVel Ensemble Learning approach to automatically locate VulnErable sTatements ([SANER 2022](https://saner2022.uom.gr/restrack))
 
 This [paper](https://arxiv.org/abs/2112.10893) presents VELVET, a novel ensemble learning approach to locate vulnerable statements. Our model combines graph-based and sequence-based neural networks to successfully capture the local and global context of a program graph and effectively understand code semantics and vulnerable patterns. This work is done by researchers from Columbia University and IBM Research.

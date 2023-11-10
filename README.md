@@ -7,6 +7,10 @@
 
 This [paper](https://arxiv.org/abs/2112.10893) presents VELVET, a novel ensemble learning approach to locate vulnerable statements. Our model combines graph-based and sequence-based neural networks to successfully capture the local and global context of a program graph and effectively understand code semantics and vulnerable patterns. This work is done by researchers from Columbia University and IBM Research.
 
+## Updates
+
+__Nov, 2023__: __For the convenience of PyTorch users and easier adoption or customization, and to enable VELVET's potential of integrating the latest deep-learning techniques, we are re-implementing VELVET with PyTorch, taking advantage of the latest pre-trained code LM checkpoints and GNN architectures. Please check [VELVET-PyTorch](https://github.com/Robin-Y-Ding/VELVET-PyToch).__
+
 ## Data
 
 This paper considers two datasets as the main resources for the evaluation:
@@ -24,12 +28,19 @@ Our implementation for the model can be found [here](src/).
 
 ## Citation
 ```
-@misc{ding2021velvet,
-      title={VELVET: a noVel Ensemble Learning approach to automatically locate VulnErable sTatements}, 
-      author={Yangruibo Ding and Sahil Suneja and Yunhui Zheng and Jim Laredo and Alessandro Morari and Gail Kaiser and Baishakhi Ray},
-      year={2021},
-      eprint={2112.10893},
-      archivePrefix={arXiv},
-      primaryClass={cs.SE}
+@inproceedings{ding2022velvet,
+author = {Y. Ding and S. Suneja and Y. Zheng and J. Laredo and A. Morari and G. Kaiser and B. Ray},
+booktitle = {2022 IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER)},
+title = {VELVET: a noVel Ensemble Learning approach to automatically locate VulnErable sTatements},
+year = {2022},
+issn = {1534-5351},
+pages = {959-970},
+keywords = {location awareness;codes;neural networks;static analysis;software;data models;security},
+doi = {10.1109/SANER53432.2022.00114},
+url = {https://doi.ieeecomputersociety.org/10.1109/SANER53432.2022.00114},
+publisher = {IEEE Computer Society},
+address = {Los Alamitos, CA, USA},
+month = {mar}
 }
+
 ```
